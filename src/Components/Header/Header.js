@@ -3,7 +3,7 @@ import { View, StyleSheet, Pressable,Text } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import { useNavigation } from '@react-navigation/core'
 
-function Header() {
+function Header({ title}) {
 
     const navigation = useNavigation();
 
@@ -15,7 +15,7 @@ function Header() {
             <Pressable style={styles.backButton} onPress={goBack}>
                 <Ionicons name='chevron-back' size={20} color="white" />
             </Pressable>
-            <Text style={styles.appTitle}>GoGrade</Text>
+            <Text style={styles.appTitle}>{title}</Text>
       </View>
   )
 }

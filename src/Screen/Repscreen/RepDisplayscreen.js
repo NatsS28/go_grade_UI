@@ -23,7 +23,7 @@ function RepDisplayscreen() {
 
     return (
         <SafeAreaView>
-            <Header />
+            <Header title={"GoGrade"}/>
             <View>
                 <Text style={styles.managerName}>Welcome <Text style={{ color:'#b50b22'}}>{userName}</Text></Text>
             </View>
