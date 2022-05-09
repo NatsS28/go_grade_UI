@@ -4,11 +4,15 @@ import Header from '../../Components/Header/Header';
 import { SafeAreaView } from 'react-native-safe-area-context'
 import contact from '../../../assets/data/contacts.json'
 import { useNavigation } from '@react-navigation/core';
+import { useRecoilValue } from 'recoil';
+import { managerName } from '../../recoil/atom';
+import { color } from 'react-native/Libraries/Components/View/ReactNativeStyleAttributes';
 
 function RepDisplayscreen() {
 
     const [searchValue, setSearchValue] = useState('');
     const [filteredContacts, setFilteredContacts] = useState(contact); 
+    const userName = useRecoilValue(managerName);
     
     const navigation = useNavigation();
 
@@ -20,6 +24,9 @@ function RepDisplayscreen() {
     return (
         <SafeAreaView>
             <Header />
+            <View>
+                <Text style={styles.managerName}>Welcome <Text style={{ color:'#b50b22'}}>{userName}</Text></Text>
+            </View>
             <TextInput placeholder='Search for Rep' style={styles.searchInput} value={searchValue} onChangeText={setSearchValue}/>
             <View style={styles.repList}>
                 <FlatList data={filteredContacts} renderItem={({ item }) => (<Pressable><View style={styles.container}><Text style={styles.repName}>{item.user_display_name}</Text><Text style={styles.phone}>{item.user_phone}</Text></View></Pressable>)}
@@ -37,6 +44,12 @@ const styles = StyleSheet.create({
         padding: 15,
         marginTop: 15,
         flex: 1,
+    },
+    managerName: {
+        textAlign: 'center',
+        fontSize: 16,
+        fontWeight: "bold",
+        color: 'black',
     },
     repList: {
         padding:10,
@@ -64,14 +77,13 @@ const styles = StyleSheet.create({
     searchInput: {
         backgroundColor: '#d4d0cf',
         padding: 5,
+        marginTop:7,
         borderRadius: 7,
         marginBottom: 10,
         width: "90%",
         marginLeft:18,
         textAlign:'center'
     },
-    
-
 })
 
 export default RepDisplayscreen

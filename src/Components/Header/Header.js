@@ -8,8 +8,7 @@ function Header() {
     const navigation = useNavigation();
 
     const goBack = () => {
-        console.warn("sd")
-        navigation.goBack();
+        navigation.pop();
     }
     return (
         <View style={styles.header}>
