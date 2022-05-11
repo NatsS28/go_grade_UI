@@ -1,0 +1,17 @@
+[
+    {
+        "name":"Smart DSR",
+        "mainCatId": "1",
+        "icon":"./smartDSR.png"
+    },
+    {
+        "name": "Prepare Smart",
+        "mainCatId": "2",
+        "icon": "./smartDSR.png"
+    },
+    {
+        "name": "Sell Smart",
+        "mainCatId": "3",
+        "icon": "./smartDSR.png"
+    }
+]

@@ -6,7 +6,6 @@ import contact from '../../../assets/data/contacts.json'
 import { useNavigation } from '@react-navigation/core';
 import { useRecoilValue } from 'recoil';
 import { managerName } from '../../recoil/atom';
-import { color } from 'react-native/Libraries/Components/View/ReactNativeStyleAttributes';
 
 function RepDisplayscreen() {
 
@@ -15,6 +14,9 @@ function RepDisplayscreen() {
     const userName = useRecoilValue(managerName);
     
     const navigation = useNavigation();
+    const reportNavigation = (item) => {
+        navigation.navigate("MainCategories", { item });
+    }
 
     useEffect(() => {
         const newContacts = contact.filter((eachContact) => eachContact.user_display_name.includes(searchValue)); 
@@ -29,7 +31,7 @@ function RepDisplayscreen() {
             </View>
             <TextInput placeholder='Search for Rep' style={styles.searchInput} value={searchValue} onChangeText={setSearchValue}/>
             <View style={styles.repList}>
-                <FlatList data={filteredContacts} renderItem={({ item }) => (<Pressable><View style={styles.container}><Text style={styles.repName}>{item.user_display_name}</Text><Text style={styles.phone}>{item.user_phone}</Text></View></Pressable>)}
+                <FlatList data={filteredContacts} renderItem={({ item }) => (<Pressable onPress={() => reportNavigation(item)}><View style={styles.container}><Text style={styles.repName}>{item.user_display_name}</Text><Text style={styles.phone}>{item.user_phone}</Text></View></Pressable>)}
                     ItemSeparatorComponent={() => (<View style={styles.seperator}></View>)}
                 >
 

@@ -25,10 +25,10 @@ const styles = StyleSheet.create({
         width: '100%',
         height:60,
         backgroundColor: '#b50b22',
-        marginVertical:10
+        marginVertical: 10,
     },
     backButton: {
-        top: 15,
+        top: 25,
         left:10,
     },
     appTitle: {
