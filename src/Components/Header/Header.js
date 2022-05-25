@@ -8,11 +8,12 @@ function Header({ title}) {
     const navigation = useNavigation();
 
     const goBack = () => {
+        console.log("sds")
         navigation.pop();
     }
     return (
         <View style={styles.header}>
-            <Pressable style={styles.backButton} onPress={goBack}>
+            <Pressable onPress={() => goBack()} style={styles.backButton}>
                 <Ionicons name='chevron-back' size={20} color="white" />
             </Pressable>
             <Text style={styles.appTitle}>{title}</Text>
@@ -26,10 +27,11 @@ const styles = StyleSheet.create({
         height:60,
         backgroundColor: '#b50b22',
         marginVertical: 10,
+        textAlignVertical:'center',
     },
     backButton: {
-        top: 25,
-        left:10,
+        textAlignVertical: 'center',
+        marginTop:10,
     },
     appTitle: {
         color: 'white',

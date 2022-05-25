@@ -1,0 +1,110 @@
+[
+    {
+        "mainCatId": 1,
+        "subListId": 1,
+        "subListName": "Smart Check",
+        "questionId": 1,
+        "question": "Dress code",
+        "questionType": "YesNo",
+        "alertText": "Please Update-Dress code"
+    },
+    {
+        "mainCatId": 1,
+        "subListId": 1,
+        "subListName": "Smart Check",
+        "questionId": 2,
+        "question": "Wear Helmet",
+        "questionType": "YesNo",
+        "alertText": "Please Update-Wear Helmet"
+    },
+    {
+        "mainCatId": 1,
+        "subListId": 1,
+        "subListName": "Smart Check",
+        "questionId": 3,
+        "question": "Looking neat and clean",
+        "questionType": "YesNo",
+        "alertText": "Please Update-Looking neat and clean"
+    },
+    {
+        "mainCatId": 2,
+        "subListId": 1,
+        "subListName": "Preparations",
+        "questionId": 1,
+        "question": "Knows about market",
+        "questionType": "Rating",
+        "alertText": "Please Update-Knows about market"
+    },
+    {
+        "mainCatId": 2,
+        "subListId": 1,
+        "subListName": "Preparations",
+        "questionId": 2,
+        "question": "Ready with necessary brouchers",
+        "questionType": "YesNo",
+        "alertText": "Please Update-Ready with necessary brouchers"
+    },
+    {
+        "mainCatId": 2,
+        "subListId": 1,
+        "subListName": "Preparations",
+        "questionId": 3,
+        "question": "Having list of customers",
+        "questionType": "YesNo",
+        "alertText": "Please Update-Having list of customers"
+    },
+    {
+        "mainCatId": 2,
+        "subListId": 1,
+        "subListName": "Preparations",
+        "questionId": 4,
+        "question": "Updated with schemes and promotions",
+        "questionType": "YesNo",
+        "alertText": "Please Update-Updated with schemes and promotions"
+    },
+    {
+        "mainCatId": 3,
+        "subListId": 1,
+        "subListName": "Sales Pitch",
+        "questionId": 1,
+        "question": "Verifying brand visibility",
+        "questionType": "YesNo",
+        "alertText": "Please Update-Verifying brand visibility"
+    },
+    {
+        "mainCatId": 3,
+        "subListId": 1,
+        "subListName": "Sales Pitch",
+        "questionId": 2,
+        "question": "Pitching skill about product",
+        "questionType": "YesNo",
+        "alertText": "Please Update-Pitching skill about product"
+    },
+    {
+        "mainCatId": 3,
+        "subListId": 1,
+        "subListName": "Sales Pitch",
+        "questionId": 3,
+        "question": "Communication with customer",
+        "questionType": "Rating",
+        "alertText": "Please Update-Communication with customer"
+    },
+    {
+        "mainCatId": 3,
+        "subListId": 1,
+        "subListName": "Sales Pitch",
+        "questionId": 4,
+        "question": "Explaination about product",
+        "questionType": "Rating",
+        "alertText": "Please Update-Explaination about product"
+    },
+    {
+        "mainCatId": 3,
+        "subListId": 1,
+        "subListName": "Sales Pitch",
+        "questionId": 5,
+        "question": "Explaination about scehemes",
+        "questionType": "Rating",
+        "alertText": "Please Update-Explaination about scehemes"
+    }
+]

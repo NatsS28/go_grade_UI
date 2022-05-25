@@ -1,0 +1,26 @@
+[
+    {
+        "mainCatId": 1,
+        "subListId": 1,
+        "subCatName": "Smart Check",
+        "totalQuestions":5
+    },
+    {
+        "mainCatId": 2,
+        "subListId": 1,
+        "subCatName": "Preparations",
+        "totalQuestions": 5
+    },
+    {
+        "mainCatId": 3,
+        "subListId": 1,
+        "subCatName": "Planning",
+        "totalQuestions": 5
+    },
+    {
+        "mainCatId": 3,
+        "subListId": 2,
+        "subCatName": "Site Check",
+        "totalQuestions": 5
+    }
+]

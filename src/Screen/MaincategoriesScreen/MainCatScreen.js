@@ -2,9 +2,17 @@ import React from 'react';
 import { View, StyleSheet, Pressable, Text, FlatList, Image } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context'
 import Header from '../../Components/Header/Header';
-import mainCat from '../../../assets/data/mainCat.json'
+import mainCat from '../../../assets/data/mainCat.json';
+import { useNavigation } from '@react-navigation/core';
 
 function MainCatScreen() {
+
+    const navigation = useNavigation();
+
+    const subCatNavigation = () => {
+        navigation.navigate("subCategories");
+    }
+
     return (
         <SafeAreaView>
             <Header title={"Accompaniment Report"} />
@@ -19,11 +27,12 @@ function MainCatScreen() {
                         </View>
                         <View style={Styles.right}>
                             <Pressable style={Styles.remarkLink}><Text style={{ color: '#4e0d94', textDecorationLine: 'underline' }}>View Previous Remark</Text></Pressable>
-                            <Pressable style={[Styles.button]}><Text style={{ color: 'white' }}>Enter Remarks</Text></Pressable>
+                            <Pressable style={[Styles.button]} onPress={() => subCatNavigation()}><Text style={{ color: 'white' }}>Enter Remarks</Text></Pressable>
                         </View>
                     </View>
                 </Pressable>)}
-                ItemSeparatorComponent={() => (<View style={Styles.seperator}></View>)}>
+                ItemSeparatorComponent={() => (<View style={Styles.seperator}></View>)}
+                keyExtractor={(item, index) => index.toString()}>
 
             </FlatList>
         </SafeAreaView>
